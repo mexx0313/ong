@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+    base: '/ong/',
     root: 'html',
     build: {
         outDir: '../dist',
