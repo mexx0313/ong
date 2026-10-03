@@ -289,3 +289,9 @@ if (evento.target.id === 'estado') {
     });
 }
 AOS.init();
+
+const botaoTema = document.querySelector('#botao-tema');
+
+botaoTema.addEventListener('click', () => {
+    document.body.classList.toggle('modo-escuro');
+});
