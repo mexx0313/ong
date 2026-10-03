@@ -1,6 +1,6 @@
 :root {
     /* CORES */
-    --cor-primaria: #F53E68;
+    --cor-primaria: #c92f52;
     --cor-primaria-escura: #C92F52;
     --cor-secundaria: #F7A6B8;
     --cor-destaque: #FFD166;
@@ -25,10 +25,19 @@
     --espaco-6: 48px;
 }
 
+body.modo-escuro {
+    --cor-fundo: #1E1E1E;
+    --cor-branco: #2B2B2B;
+    --cor-texto: #FFFFFF;
+    --cor-neutro: #D0D0D0;
+}
+
 
 body {
     padding: 0;
     margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
 
@@ -72,6 +81,7 @@ body {
 /* FLEXBOX - CABEÇALHO */
 
 .cabecalho {
+    background-color: var(--cor-branco);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,7 +100,7 @@ body {
     background-color: var(--cor-primaria-escura);
     transition: 0.3s;
 }
-.cabecalho > a :focus {
+.cabecalho > a:focus {
     outline: 3px solid var(--cor-destaque);
     outline-offset: 3px;
 } 
@@ -157,6 +167,14 @@ input:invalid {
     min-width: 180px;
 }
 
+body.modo-escuro .submenu {
+    background-color: #2B2B2B;
+}
+
+body.modo-escuro .submenu a {
+    color: #FFFFFF;
+}
+
 .menu-item:hover .submenu {
     display: flex;
     flex-direction: column;
@@ -187,6 +205,7 @@ input:invalid {
 .sobre {
     padding: 70px 128px;
     text-align: center;
+    background-color: var(--cor-fundo);
 }
 
 .sobre h1 {
@@ -199,6 +218,7 @@ input:invalid {
     max-width: 700px;
     margin: 15px auto;
     line-height: 1.5;
+    color: var(--cor-texto);
 }
 
 
@@ -249,6 +269,7 @@ input:invalid {
 .ajuda {
     padding: 70px 128px;
     text-align: center;
+    background-color: var(--cor-fundo);
 }
 .ajuda h1,
 .ajuda > p,
@@ -267,7 +288,7 @@ input:invalid {
     width: 250px;
     margin: 15px;
     padding: 20px;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-branco);
     border-radius: 15px;
     vertical-align: top;
 }
